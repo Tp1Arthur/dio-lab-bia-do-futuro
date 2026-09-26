@@ -1,0 +1,53 @@
+{
+  "conceitos": [
+    {
+      "termo": "Reserva de emergência",
+      "definicao": "Valor guardado para cobrir imprevistos (perda de renda, problemas de saúde, consertos urgentes), sem precisar recorrer a empréstimos ou cartão de crédito.",
+      "recomendacao": "Ideal ter entre 3 e 6 meses de gastos essenciais guardados, em um investimento de alta liquidez."
+    },
+    {
+      "termo": "Regra 50/30/20",
+      "definicao": "Divisão da renda mensal em três blocos: 50% necessidades, 30% desejos, 20% poupança/investimentos."
+    },
+    {
+      "termo": "Juros simples",
+      "definicao": "Calculados apenas sobre o valor inicial (principal).",
+      "formula": "J = C * i * t"
+    },
+    {
+      "termo": "Juros compostos",
+      "definicao": "Calculados sobre o valor inicial mais os juros já acumulados — 'juros sobre juros'.",
+      "formula": "M = C * (1 + i)^t"
+    },
+    {
+      "termo": "Gasto fixo",
+      "definicao": "Despesa que se repete todo mês com valor igual ou parecido (ex: aluguel, mensalidade)."
+    },
+    {
+      "termo": "Gasto variável",
+      "definicao": "Despesa que muda de valor a cada mês (ex: supermercado, lazer, transporte por app)."
+    },
+    {
+      "termo": "Dívida rotativa do cartão de crédito",
+      "definicao": "Modalidade de crédito com juros muito altos, ativada quando se paga apenas parte da fatura.",
+      "alerta": "Uma das formas de crédito mais caras do mercado. Evitar sempre que possível."
+    }
+  ],
+  "categorias_gastos": {
+    "Moradia": ["Aluguel", "Condomínio", "Energia elétrica", "Água", "Internet"],
+    "Alimentação": ["Supermercado", "Restaurante", "Delivery", "Feira"],
+    "Transporte": ["Combustível", "Uber/99", "Transporte público", "Manutenção do veículo"],
+    "Lazer": ["Streaming", "Cinema", "Viagens", "Jogos"],
+    "Saúde": ["Plano de saúde", "Farmácia", "Consultas médicas", "Academia"],
+    "Educação": ["Mensalidade escolar/faculdade", "Cursos", "Livros e materiais"],
+    "Outros": ["Presentes", "Doações", "Despesas não recorrentes"]
+  },
+  "passo_a_passo_orcamento": [
+    "1. Somar toda a renda mensal",
+    "2. Listar todos os gastos fixos do mês",
+    "3. Estimar os gastos variáveis com base no histórico dos últimos meses",
+    "4. Definir uma meta de poupança/reserva de emergência",
+    "5. Comparar total de gastos + meta de poupança com a renda total",
+    "6. Ajustar categorias de desejos caso o orçamento não feche"
+  ]
+}
