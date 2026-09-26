@@ -1,42 +1,42 @@
 [
   {
-    "nome": "Tesouro Selic",
-    "categoria": "renda_fixa",
+    "nome": "Regra 50/30/20",
+    "categoria": "metodo_orcamento",
     "risco": "baixo",
-    "rentabilidade": "100% da Selic",
-    "aporte_minimo": 30.00,
-    "indicado_para": "Reserva de emergência e iniciantes"
+    "rentabilidade": "Organiza a renda em necessidades, desejos e poupança",
+    "aporte_minimo": 0,
+    "indicado_para": "Quem está começando a organizar as finanças"
   },
   {
-    "nome": "CDB Liquidez Diária",
-    "categoria": "renda_fixa",
+    "nome": "Reserva de emergência",
+    "categoria": "seguranca_financeira",
     "risco": "baixo",
-    "rentabilidade": "102% do CDI",
-    "aporte_minimo": 100.00,
-    "indicado_para": "Quem busca segurança com rendimento diário"
+    "rentabilidade": "Protege contra imprevistos sem precisar recorrer a dívidas",
+    "aporte_minimo": 0,
+    "indicado_para": "Todo mundo, especialmente quem ainda não tem reserva"
   },
   {
-    "nome": "LCI/LCA",
-    "categoria": "renda_fixa",
+    "nome": "Planilha de controle de gastos",
+    "categoria": "ferramenta",
     "risco": "baixo",
-    "rentabilidade": "95% do CDI",
-    "aporte_minimo": 1000.00,
-    "indicado_para": "Quem pode esperar 90 dias (isento de IR)"
+    "rentabilidade": "Traz visibilidade sobre para onde o dinheiro está indo",
+    "aporte_minimo": 0,
+    "indicado_para": "Quem não sabe onde o dinheiro está sendo gasto"
   },
   {
-    "nome": "Fundo Multimercado",
-    "categoria": "fundo",
-    "risco": "medio",
-    "rentabilidade": "CDI + 2%",
-    "aporte_minimo": 500.00,
-    "indicado_para": "Perfil moderado que busca diversificação"
+    "nome": "Quitação da dívida rotativa do cartão",
+    "categoria": "quitacao_dividas",
+    "risco": "alto se ignorado",
+    "rentabilidade": "Evita juros extremamente altos do rotativo",
+    "aporte_minimo": 0,
+    "indicado_para": "Quem tem fatura de cartão paga parcialmente"
   },
   {
-    "nome": "Fundo de Ações",
-    "categoria": "fundo",
-    "risco": "alto",
-    "rentabilidade": "Variável",
-    "aporte_minimo": 100.00,
-    "indicado_para": "Perfil arrojado com foco no longo prazo"
+    "nome": "Poupança automática mensal",
+    "categoria": "habito_financeiro",
+    "risco": "baixo",
+    "rentabilidade": "Cria disciplina de guardar dinheiro todo mês, sem esforço manual",
+    "aporte_minimo": 20,
+    "indicado_para": "Quem quer criar o hábito de poupar aos poucos"
   }
 ]
