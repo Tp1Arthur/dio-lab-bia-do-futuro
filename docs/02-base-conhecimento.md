@@ -2,54 +2,46 @@
 
 ## Dados Utilizados
 
-Descreva se usou os arquivos da pasta `data`, por exemplo:
-
 | Arquivo | Formato | Utilização no Agente |
 |---------|---------|---------------------|
-| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores |
-| `perfil_investidor.json` | JSON | Personalizar recomendações |
-| `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil |
-| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente |
+| `conceitos_financeiros.json` | JSON | Explicar termos financeiros básicos (juros, reserva de emergência, orçamento, etc.) quando a pessoa perguntar |
+| `categorias_gastos.json` | JSON | Ajudar a classificar e organizar os gastos informados pela pessoa usuária |
+| `regras_orcamento.json` | JSON | Sugerir formas de dividir a renda (ex: regra 50/30/20) conforme a situação relatada |
+| `transacoes_exemplo.csv` | CSV | Dataset fictício de transações, usado como exemplo prático de categorização e análise de gastos |
 
 > [!TIP]
-> **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio.
+> Não precisei usar datasets do Hugging Face — o escopo é simples o suficiente pra rodar com dados próprios, curados manualmente pro contexto do desafio.
 
 ---
 
 ## Adaptações nos Dados
 
-> Você modificou ou expandiu os dados mockados? Descreva aqui.
-
-[Sua descrição aqui]
+Não usei os arquivos de exemplo do repositório de referência (`historico_atendimento.csv`, `perfil_investidor.json`, `produtos_financeiros.json`), porque o tema da Bia é organização financeira pessoal, não recomendação de investimentos. Criei uma base de conhecimento própria, com foco em conceitos, categorias de gastos e regras de orçamento — mais compatível com o público-alvo (iniciantes na vida financeira).
 
 ---
 
 ## Estratégia de Integração
 
 ### Como os dados são carregados?
-> Descreva como seu agente acessa a base de conhecimento.
-
-[ex: Os JSON/CSV são carregados no início da sessão e incluídos no contexto do prompt]
+Os arquivos JSON e CSV são carregados no início da execução do programa e transformados em texto estruturado, que é incluído no *system prompt* enviado à IA junto com as instruções de comportamento da Bia.
 
 ### Como os dados são usados no prompt?
-> Os dados vão no system prompt? São consultados dinamicamente?
-
-[Sua descrição aqui]
+Os dados vão diretamente no *system prompt*, como contexto fixo (a base é pequena o suficiente para caber inteira). A Bia é instruída a responder apenas com base nesse conteúdo e a admitir quando não tem a informação, em vez de consultar os dados dinamicamente durante a conversa.
 
 ---
 
 ## Exemplo de Contexto Montado
 
-> Mostre um exemplo de como os dados são formatados para o agente.
-
 ```
-Dados do Cliente:
-- Nome: João Silva
-- Perfil: Moderado
-- Saldo disponível: R$ 5.000
+Conceitos disponíveis:
+- Reserva de emergência: valor guardado para imprevistos, recomendado entre 3 e 6 meses de gastos essenciais.
+- Regra 50/30/20: 50% da renda para necessidades, 30% para desejos, 20% para poupança/investimento.
 
-Últimas transações:
-- 01/11: Supermercado - R$ 450
-- 03/11: Streaming - R$ 55
-...
+Categorias de gastos:
+- Moradia, Alimentação, Transporte, Lazer, Saúde, Educação, Outros
+
+Exemplo de transações da pessoa usuária:
+- 01/11: Supermercado - R$ 450 (Alimentação)
+- 03/11: Streaming - R$ 55 (Lazer)
+- 05/11: Uber - R$ 32 (Transporte)
 ```
