@@ -12,6 +12,7 @@ Este arquivo faz 4 coisas, nesta ordem:
 import os
 import json
 import csv
+import time
 
 from dotenv import load_dotenv
 from google import genai
@@ -155,12 +156,20 @@ def main():
         if not pergunta:
             continue
 
-        try:
-            resposta = chat.send_message(pergunta)
-            print(f"\nBia: {resposta.text}")
-        except Exception as erro:
-            print(f"\n[Erro ao falar com a Bia: {erro}]")
-            print("Verifique se sua GEMINI_API_KEY está correta no arquivo .env")
+        # Tenta até 3 vezes se o servidor estiver sobrecarregado (erro 503)
+        tentativas = 3
+        for tentativa in range(1, tentativas + 1):
+            try:
+                resposta = chat.send_message(pergunta)
+                print(f"\nBia: {resposta.text}")
+                break
+            except Exception as erro:
+                if "503" in str(erro) and tentativa < tentativas:
+                    print(f"\n[Servidor ocupado, tentando de novo... ({tentativa}/{tentativas})]")
+                    time.sleep(3)
+                else:
+                    print(f"\n[Erro ao falar com a Bia: {erro}]")
+                    print("Verifique se sua GEMINI_API_KEY está correta no arquivo .env")
 
 
 if __name__ == "__main__":
