@@ -34,7 +34,7 @@ client = genai.Client()
 
 # Nome do modelo que vamos usar. O Flash é rápido, leve e está dentro do
 # tier gratuito do Gemini -- ideal pro seu caso.
-MODEL_NAME = "gemini-2.0-flash"
+MODEL_NAME = "gemini-3.8-flash"
 
 # Caminho da pasta data/, calculado a partir da localização deste arquivo.
 # Isso evita erro de "arquivo não encontrado" quando você roda o programa
